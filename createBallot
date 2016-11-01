@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Ballot</title>
+	<script>
+	var candidates = [];
+	JSarray=candidates;
+	
+	function add_candidate(){
+		candidates.push(document.getElementById("candidate_name").value);
+		document.getElementById("added_candidates").innerHTML = candidates;
+		document.getElementById("candidate_name").value = "";
+		
+		
+
+	}
+	function send_value(){
+		document.myform.secret.value = JSarray.toString();
+	}
+	
+	</script>
+</head>
+<body>
+	<p>Enter the name of a candidate for this election. After you enter the name hit add</p>
+	<input name="candidate_name" id="candidate_name" type="text" placeholder="Candidates name here please.">
+	<button name="add" id="add" onclick="add_candidate()">Add</button>
+	<br><br>
+	<h4>Candidates already added</h4>
+	<p style="background-color:#D3D3D3;" id="added_candidates"></p>
+	<form action="subCon.php" method='post' name='myform' onSubmit='send_value()'>
+	<input name='secret' type='hidden' value=''>
+	<input type='submit' value='Create Ballot'>
+	</form>
+</body>
+</html>
