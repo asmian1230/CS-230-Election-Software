@@ -40,6 +40,9 @@
                 echo "Unable to open file!";
             }
         ?>
+        <br><br>
+        <!--Links to Ballot Template, which EC will use to create a new ballot-->
+        <input type = "button" onclick = "location.href = 'http://www.lab230g4.net/Mian/ballotTemplate.php'" value = "Ballot Template">
         
         <br><br><br><br><br>
         <!--Link to previous page-->
